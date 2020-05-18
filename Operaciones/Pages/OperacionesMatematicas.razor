@@ -1,0 +1,27 @@
+﻿@page "/operaciones"
+<h2>Operaciones</h2>
+
+<div>
+    <p> Primera cantidad : <input id="PrimeraCantidadText" type="text" @bind="cantidad1" /> </p>
+    <p> Segunda cantidad: <input id="SegundaCantidadText" type="text" @bind="cantidad2" /> </p>
+</div>
+
+<br /> <p> Suma: @suma </p>
+<p> Resta: @resta </p>
+<p> Division: @multiplicacion </p>
+
+
+<button class="btn btn-success" @onclick="Calcular">Calcular</button>
+
+@code {
+    private float cantidad1, cantidad2, suma, resta, multiplicacion;
+
+
+    private void Calcular()
+    {
+        suma = cantidad1 + cantidad2;
+        resta = cantidad1 - cantidad2;
+        multiplicacion = cantidad1 * cantidad2;
+    }
+}
+
